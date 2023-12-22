@@ -1,5 +1,5 @@
 import { createRouter , createWebHistory } from 'vue-router'
-//静的インポート　最初からファイルを読み込む
+// 静的インポート　最初からファイルを読み込む
 // import Home from '../views/Home.vue'
 
 const routes = [

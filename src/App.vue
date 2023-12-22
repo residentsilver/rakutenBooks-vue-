@@ -1,27 +1,21 @@
 <template>
-
-<div>
-  <!-- Aタグのリンクの代わり -->
-  <router-link to="/">Home</router-link>
-  <router-link to="/add">Add</router-link>
-  <router-link to="/home">Homeのみ</router-link>
-</div>
-
-<router-view/>
-
   <v-app>
+    <div>
+      <!-- Aタグのリンクの代わり -->
+      <!-- <router-link to="/">Home</router-link> -->
+      <router-link to="/add">Add</router-link>
+      <router-link to="/home">Homeのみ</router-link>
+    </div>
     <v-main>
-      <Book  v-on:result-event="change_book" 
-        v-for="abc in books" 
-        v-bind:book="abc"
-        v-bind:key="abc.id" />
+      <router-view />
+      <!-- <Book v-on:result-event="change_book" v-for="abc in books" v-bind:book="abc" v-bind:key="abc.id" /> -->
     </v-main>
     <v-container>
-        <CreateBook v-on:result-event="change_book"/>
+      <!-- <CreateBook v-on:result-event="change_book" /> -->
     </v-container>
 
 
-<!-- router/index.jsで書いたコンポーネントが反映 -->
+    <!-- router/index.jsで書いたコンポーネントが反映 -->
 
 
   </v-app>
@@ -58,11 +52,11 @@ export default {
     // this.book_title = first_item.price
     // this.book_img = first_item.largeImageUrl
   },
-  methods:{
-    change_book(data){
-      this.books= data;
+  methods: {
+    change_book(data) {
+      this.books = data;
     }
-    }
+  }
 }
 
 </script>

@@ -1,12 +1,7 @@
 <template>
-  <v-app>
-    <v-main>
-      <v-container>
-        <CreateBook v-on:result-event="change_book" />
-      </v-container>
 
-    </v-main>
-  </v-app>
+  <CreateBook v-on:result-event="change_book" />
+
 </template>
 
 <script>
